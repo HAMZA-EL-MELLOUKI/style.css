@@ -1,0 +1,362 @@
+/* general reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+* a {
+  cursor: pointer;
+  text-decoration: none;
+}
+body {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  background-image: url('backg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* header settings */
+.head-container {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-container img {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+}
+
+.head-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  backdrop-filter: blur(2px);
+}
+
+.head-content p {
+  text-align: center;
+  color: white;
+  margin: 5px 0;
+}
+
+.head-container h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 5px 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.head-container h1 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* nav bar list in top header */
+.nav-list {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+.nav-list > * {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.service-list {
+  display: none;
+}
+
+.list li {
+  list-style: none;
+}
+
+.list a {
+  cursor: pointer;
+  text-decoration: none;
+  color: aliceblue;
+  transition: color 0.5s;
+}
+
+.list a:hover {
+  color: aquamarine;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: wrap;
+    }
+}
+
+.wraper {
+  /* main wraper */
+  padding: 20px;
+  width: 100%;
+}
+
+/* cards ( articles ) settings */
+.cards {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  min-width: 200px;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 1px 0 aliceblue;
+}
+
+.card h2 {
+  margin: 0 0 10px 0;
+  color: azure;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card p {
+  line-height: 1.4;
+  color: snow;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+/* settings for special cards in main */
+#basiscard30 {
+  flex-basis: 30%;
+}
+
+#basiscard10 {
+  flex-basis: 50%;
+}
+
+/*main footer section */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: auto;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.footer {
+  color: azure;
+  align-self: center;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* footer widgets settings */
+.widgets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.widget {
+  min-width: 200px;
+  height: auto;
+  background-color: rgba(250, 250, 250, 0.1);
+  border-color: whitesmoke;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.widget h3 {
+  text-align: center;
+  font-size: 18px;
+  color: aliceblue;
+  margin-bottom: 10px;
+  background-color: rgba(250, 250, 250, 0.3);
+  padding: 5px;
+}
+
+.widget p {
+  color: whitesmoke;
+  margin-top: 5px;
+  padding: 10px;
+  line-height: 1.6;
+}
+
+#contact {
+  font-family: courier;
+}
+#contact a {
+  text-decoration: none;
+  color: aquamarine;
+  cursor: pointer;
+}
+#social-icons {
+  /* social icons widget in footer */
+  text-align: center;
+}
+
+#social-icons ul {
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 10px 0 10px 0;
+  font-size: 30px;
+}
+
+/*social icons ( font awesome )*/
+.fa-facebook {
+  color: deepskyblue;
+}
+.fa-instagram {
+  color: coral;
+}
+.fa-youtube {
+  color: red;
+}
+.fa-envelope {
+  color: khaki;
+}
+.fa-whatsapp {
+  color: lawngreen;
+}
+.fa-map-marker-alt {
+  color: darkorange;
+}
+/* end of social icons */
+
+.buttons {
+  /* last widget in footer for more buttons section  id="buttons"*/
+  padding: 10px;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: wrap;
+  align-items: center;
+}
+.buttons button {
+  flex-grow: ;
+  flex-shrink: 1;
+  padding: 8px;
+  background-color: rgba(250, 250, 250, 0.4);
+  border: none;
+  border-radius: 10px;
+}
+.buttons a {
+  font-size: 14px;
+  text-decoration: none;
+  color: aquamarine;
+  font-weight: bold;
+}
+
+/* hover for links and buttons */
+
+.head-container h1:hover, .head-container h1:focus {
+  color: gold;
+  position: relative;
+}
+
+
+.head-container h1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+  border-radius: 10px;
+}
+
+.head-container h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* services page */
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.s-card {
+  border-radius: 10px;
+  flex-grow: ;
+  flex-shrink: 1;
+  width: 150px;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid white;
+  text-align: center;
+  background: rgba(250, 250, 250, 0.1);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease-in-out;
+}
+.s-card:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.s-card img {
+  width: 100px;
+  height:100px;
+}
+.s-card h3 {
+  font-size: 1rem;
+  padding: 5px;
+  color: white;
+  margin: 5px 0 0 0;
+}
+.ser-btn {
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid aliceblue;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: whitesmoke;
+  transition: 0.4s ease-in-out;
+}
+.ser-btn:hover {
+  transform: scale(1.1);
+  border-color: gold;
+  color: gold;
+}
